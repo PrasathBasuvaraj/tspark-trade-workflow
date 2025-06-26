@@ -6,9 +6,9 @@ import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.info.License;
 
 @OpenAPIDefinition(info = @Info(
-        title = "TechSpark SpringBoot Starter Template",
+        title = "Spring Boot-based trade approval workflow powered by Flowable BPM.",
         version = "1.0",
-        description = "The TechSpark SpringBoot Starter Template is a pre-configured boilerplate designed to accelerate Spring Boot application development by integrating essential libraries, best practices.",
+        description = "Demo repository showcasing a Spring Boot-based trade approval workflow powered by Flowable BPM. Designed to demonstrate lightweight workflow automation using BPMN with service and user tasks.",
         contact = @Contact(name = "Support Team", email = "codrixtechtrainer@gmail.com"),
         license = @License(name = "MIT License", url = "https://opensource.org/licenses/MIT")
 ))
