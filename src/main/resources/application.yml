@@ -1,0 +1,8 @@
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html       # Sets the URL path for accessing the Swagger UI
+    displayRequestDuration: true # Displays the duration of each request on Swagger UI
+    deepLinking: true            # Enables URL linking to specific API sections or endpoints
+    docExpansion: none           # Controls initial expansion of endpoints (options: 'list' for expanded, 'none' for collapsed)
+    showExtensions: true         # Shows vendor extensions (custom fields) in the Swagger UI
+    filter: true                 # Adds a search box to filter displayed API endpoints by keyword
