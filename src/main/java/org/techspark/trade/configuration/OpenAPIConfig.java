@@ -1,4 +1,4 @@
-package org.techspark.starter.configuration;
+package org.techspark.trade.configuration;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Contact;

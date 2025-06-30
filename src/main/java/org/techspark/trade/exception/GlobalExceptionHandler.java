@@ -1,4 +1,4 @@
-package org.techspark.starter.exception;
+package org.techspark.trade.exception;
 
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.ConstraintViolationException;
