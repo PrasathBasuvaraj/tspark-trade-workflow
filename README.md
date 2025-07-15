@@ -1,45 +1,40 @@
-# Spring Boot Starter Template Repository
+# tspark-trade-workflow
 
-Welcome to the Spring Boot Starter Template Repository! This project provides a ready-to-use Spring Boot Starter setup,
-helping you jumpstart new applications quickly and efficiently.
+TSpark Trade Workflow is a demonstration project showcasing the use-case of running a lightweight workflow engine for
+stock trading operations. This project is built using Spring Boot and Flowable engine and provides a solid foundation
+for building robust
+applications.
 
-## Getting Started
+## 🚀 Running the Project
 
-- Click the “Use this template” button at the top of this repository’s page.
-- Provide a name for your new repository and choose whether it should be public or private.
-- Click “Create repository from template” to generate your own copy.
- 
-## Clone Your New Repository
+- Clone the repo:
 
-- Open your new repository on GitHub.
-- Click the “Code” button and copy the repository URL.
-- Run git clone <your-repo-url> in your terminal to clone the code locally.
-
-## Customize Project Settings
-
-- Update the build.gradle (Gradle) file with your group ID, artifact ID, or any relevant project information.
-- If necessary, rename packages or modules to suit your organization’s naming conventions.
-
-## Build and Run the Application
-
-```shell
-./gradlew build bootRun
+```bash
+git clone https://github.com/TechSparkWorkspace/tspark-trade-workflow.git
+cd tspark-trade-workflow
 ```
 
-Open your browser and goto [API Documentation](http://localhost:8080/swagger-ui/index.html)
+- Start the app
 
-- Access the running application by opening your browser at http://localhost:8080 (unless you changed the port).
+```bash
+./gradlew bootRun
+```
 
-## Starter Template Features
+- Open Swagger UI to test APIs:
 
-This starter template comes with below features.
+[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
-- Spring Boot Web, Validation, JPA, and Actuator
-- SpringDoc OpenAPI with Swagger UI
-- Lombok for reducing boilerplate code
-- MapStruct for DTO-to-Entity conversion
-- H2 In-Memory Database for testing
-- Stock Portfolio CRUD with Service, Repo, Controller
-- Global Exception Handling with @ControllerAdvice
-- JUnit 5 & Mockito for unit testing
-- Feature-based folder structure
+## ⚙️ Interacting with the Workflow
+
+This project includes a dedicated controller (WorkflowController) to help you inspect and manage your running workflows
+directly through REST APIs. You can access these endpoints via Swagger or Postman to streamline debugging and manual
+flow control.
+
+### 📌 Endpoints Overview
+
+- GET `/api/workflow/instances` — List all active process instances.
+- GET `/api/workflow/tasks` — View user tasks. You can filter by:
+    - `?assignee=john` → tasks assigned to a user
+    - `?candidateGroup=managers` → tasks waiting for a group
+- POST `/api/workflow/tasks/{taskId}/complete` — Complete a user task manually. Accepts an optional JSON body to pass
+  variables.
