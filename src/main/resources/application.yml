@@ -6,3 +6,8 @@ springdoc:
     docExpansion: none           # Controls initial expansion of endpoints (options: 'list' for expanded, 'none' for collapsed)
     showExtensions: true         # Shows vendor extensions (custom fields) in the Swagger UI
     filter: true                 # Adds a search box to filter displayed API endpoints by keyword
+
+logging:
+  level:
+    org.flowable: INFO
+    org.techspark.trade: DEBUG
